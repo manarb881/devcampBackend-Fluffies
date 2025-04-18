@@ -1,0 +1,79 @@
+# Django Core
+Django==5.2
+asgiref==3.8.1
+sqlparse==0.4.1
+pytz
+
+
+channels==4.2.2     
+
+# Django REST Framework & Auth
+djangorestframework==3.16.0
+djangorestframework-simplejwt==5.5.0
+PyJWT==2.9.0
+djoser==2.3.1
+ social-auth-app-django==5.4.3
+ social-auth-core==4.5.6
+# ... other social auth lines ...
+
+# Database Driver (Choose ONE based on your settings.py)
+psycopg2-binary==2.9.10   # For PostgreSQL (Most common on Render)
+ #mysql-connector-python==9.2.0 # For MySQL (Uncomment if using MySQL)
+ protobuf==3.20.3              # Keep ONLY if using mysql-connector-python
+
+# Database URL Parsing Helper
+dj-database-url 
+# WSGI/ASGI Server (Need ASGI server for Channels)
+ gunicorn==23.0.0   # Use Gunicorn for WSGI only
+daphne              # Add Daphne (or Uvicorn) for ASGI/Channels
+                    # Let pip choose latest compatible
+
+# Environment Variables
+python-dotenv
+django-environ==0.12.0 # Keep if you use this specific package
+
+# Static Files
+whitenoise==6.9.0
+
+# CORS
+django-cors-headers==3.7.0
+
+# Optional: Filtering (Keep if your app uses it)
+ django-filter==25.1
+
+# Optional: Image Handling (Keep if using Django ImageField)
+Pillow==10.0.0
+
+# Optional: Stripe Payments (Keep if using Stripe)
+ stripe==12.0.0
+
+# Common Dependencies (Often required by the above)
+requests==2.31.0
+urllib3
+certifi
+idna
+six
+typing_extensions
+packaging
+attrs
+PyYAML
+cryptography
+cffi
+pycparser
+pyOpenSSL
+pyasn1
+pyasn1-modules==0.2.8
+setuptools
+wheel
+
+# Keep potentially necessary low-level dependencies if issues arise
+# Uncomment if build fails asking for them:
+# greenlet # May be needed by Daphne/async
+MarkupSafe
+Jinja2
+ Werkzeug
+ bleach
+ webencodings
+argon2-cffi
+argon2-cffi-bindings
+ bcrypt
